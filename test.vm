@@ -1,0 +1,21 @@
+function myFunc 2
+push argument 0
+push static 0
+sub
+pop local 1
+
+function Main.sum 0
+push argument 0
+push constant 0
+gt
+if-goto RECURSE
+push constant 0
+return
+label RECURSE
+push argument 0
+push constant 1
+sub
+call Main.sum 1
+push argument 0
+add
+return
